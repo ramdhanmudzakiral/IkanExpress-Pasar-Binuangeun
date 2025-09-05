@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tentang Kami</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <style>
+    :root {
+      --ring: 0 0 0 4px rgb(59 130 246 / .2)
+    }
+
+    body {
+      font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif
+    }
+
+    .glass {
+      backdrop-filter: saturate(160%) blur(10px);
+      background: rgba(255, 255, 255, .7)
+    }
+
+    .section-title {
+      @apply text-2xl md:text-3xl font-extrabold tracking-tight;
+    }
+
+    .section-sub {
+      @apply text-slate-600 max-w-2xl;
+    }
+
+    .card {
+      @apply rounded-2xl shadow-sm border border-slate-200 bg-white;
+    }
+
+    .badge {
+      @apply inline-flex items-center rounded-full px-3 py-1 text-xs font-semibold border;
+    }
+
+    .grid-auto {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem
+    }
+
+    .accordion-btn[aria-expanded="true"] .chev {
+      transform: rotate(180deg);
+    }
+  </style>
+</head>
+
+<body lass="bg-gray-50 text-gray-800">
+  <nav class="bg-white shadow-md sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+      <!-- Logo -->
+      <h1 class="text-2xl font-bold text-blue-600">
+        <a href="../index.html" class="flex items-center">
+          <img src="../assets/image/IkanExpress.png" alt="IkanExpress" class="w-auto" style="height:55px;">
+
+        </a>
+      </h1>
+
+      <!-- Tombol Hamburger (hanya muncul di HP) -->
+      <button id="menu-btn" class="md:hidden text-2xl focus:outline-none">
+        ☰
+      </button>
+
+      <!-- Menu utama (desktop) -->
+      <ul class="hidden md:flex space-x-6 font-medium">
+        <li><a href="../index.html" class="hover:text-blue-500">Home</a></li>
+        <li><a href="../index.html#produk" class="hover:text-blue-500">Produk</a></li>
+        <li><a href="#" class="hover:text-blue-500">Tentang Kami</a></li>
+        <li><a href="../content/testimoni.html" class="hover:text-blue-500">Testimoni</a></li>
+        <li><a href="#kontak" class="hover:text-blue-500">Kontak</a></li>
+      </ul>
+
+      <!-- Search Box (desktop) -->
+      <div class="hidden md:flex items-center space-x-2">
+        <input type="text" id="search" placeholder="Cari Ikan" class="border rounded-lg px-3 py-1 focus:outline-none">
+        <button class="bg-blue-500 text-white px-3 py-1 rounded-lg hover:bg-blue-600">
+          Cari
+        </button>
+      </div>
+    </div>
+
+
+    <!-- Search khusus HP -->
+    <div class="md:hidden px-4 mb-4 py-5">
+      <input type="text" id="search-mobile" placeholder="Cari produk..."
+        class="w-full border rounded-lg px-3 py-2 focus:outline-none">
+    </div>
+
+    <!-- Sidebar untuk HP -->
+    <div id="sidebar"
+      class="fixed top-0 left-0 h-full w-64 bg-white shadow-lg transform -translate-x-full transition-transform duration-300 z-50">
+      <div class="p-4 flex justify-between items-center border-b">
+        <h2 class="text-xl font-bold text-blue-600">Menu</h2>
+        <button id="close-btn" class="text-2xl">&times;</button>
+      </div>
+      <ul class="flex flex-col p-4 space-y-4 font-medium">
+        <li><a href="../index.html" class="hover:text-blue-500">Home</a></li>
+        <li><a href="../index.html#produk" class="hover:text-blue-500">Produk</a></li>
+        <li><a href="content/tentangkami.html" class="hover:text-blue-500">Tentang Kami</a></li>
+        <li><a href="../content/testimoni.html" class="hover:text-blue-500">Testimoni</a></li>
+        <li><a href="#kontak" class="hover:text-blue-500">Kontak</a></li>
+      </ul>
+    </div>
+
+  </nav>
+
+  <!-- content start tentang kami-->
+  <section class="relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-b from-blue-100 to-transparent"></div>
+    <div class="max-w-6xl mx-auto px-4 py-16 md:py-24 relative">
+      <div class="grid md:grid-cols-2 gap-10 items-center">
+        <div>
+          <span class="badge border-blue-200 text-blue-700 bg-blue-50">Tentang Kami</span>
+          <h1 class="mt-4 text-4xl md:text-5xl font-extrabold leading-tight">
+            Ikan Segar, <span class="text-blue-600">Langsung dari Pasar Binuangeun</span>
+          </h1>
+          <p class="mt-4 text-slate-600 text-lg">
+            Sejak hari pertama, kami berkomitmen menghadirkan <strong>ikan pilihan</strong> dari nelayan lokal
+            dengan pengemasan higienis dan pengiriman cepat agar kesegaran tetap maksimal sampai dapur Anda.
+          </p>
+          <div class="mt-6 flex flex-wrap gap-3">
+            <span class="badge border-slate-200 text-slate-700 bg-white">Same-day delivery*</span>
+            <span class="badge border-slate-200 text-slate-700 bg-white">Cold-chain packing</span>
+            <span class="badge border-slate-200 text-slate-700 bg-white">Bisa Nego</span>
+          </div>
+        </div>
+        <div class="relative">
+          <div class="aspect-[4/3] rounded-3xl overflow-hidden shadow-xl border border-slate-200 bg-white">
+            <!-- Ganti dengan foto pasar / nelayan -->
+            <video autoplay muted loop playsinline>
+              <source src="/assets/video/animasiLogo.mp4" type="video/mp4">
+
+            </video>
+          </div>
+          <div class="absolute -bottom-6 -left-6 glass rounded-2xl p-4 shadow-lg border border-white/60">
+            <p class="text-sm">Rata-rata tiba: <span class="font-semibold">3–6 jam</span> area Lebak & sekitarnya</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Statistik ringkas / social proof -->
+  <section class="max-w-6xl mx-auto px-4 py-12">
+    <div class="grid-auto">
+      <div class="card p-6 text-center">
+        <div class="text-3xl font-extrabold" data-counter="7500">0+</div>
+        <p class="text-slate-600 mt-1">Order terpenuhi</p>
+      </div>
+      <div class="card p-6 text-center">
+        <div class="text-3xl font-extrabold" data-counter="98">0%</div>
+        <p class="text-slate-600 mt-1">Pelanggan puas</p>
+      </div>
+      <div class="card p-6 text-center">
+        <div class="text-3xl font-extrabold" data-counter="30">0+</div>
+        <p class="text-slate-600 mt-1">Jenis tangkapan</p>
+      </div>
+      <div class="card p-6 text-center">
+        <div class="text-3xl font-extrabold" data-counter="7">0+</div>
+        <p class="text-slate-600 mt-1">Tahun pengalaman</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cerita Kami -->
+<section class="max-w-6xl mx-auto px-4 py-12 bg-gradient-to-r from-blue-50 via-blue-100 to-blue-50 rounded-2xl shadow-lg mb-8">
+  <h2 class="section-title text-blue-800">Cerita Kami</h2>
+  <p class="section-sub mt-2 text-blue-700">
+    Berawal dari kios kecil di Pasar Binuangeun, kami tumbuh bersama para nelayan lokal dan pelanggan setia
+    yang percaya pada kesegaran dan kejujuran kami.
+  </p>
+
+  <ol class="mt-8 relative border-l border-blue-300 space-y-8 pl-6">
+    <li>
+      <span class="absolute -left-2 top-1 w-4 h-4 rounded-full bg-blue-600"></span>
+      <h3 class="font-bold text-blue-800">2018 — Awal Mula</h3>
+      <p class="text-blue-700">Melayani tetangga dan warung sekitar dengan sistem pre-order sederhana.</p>
+    </li>
+    <li>
+      <span class="absolute -left-2 top-1 w-4 h-4 rounded-full bg-blue-600"></span>
+      <h3 class="font-bold text-blue-800">2020 — Cold Chain</h3>
+      <p class="text-blue-700">Mulai gunakan es gel & kemasan insulasi untuk menjaga suhu selama pengiriman.</p>
+    </li>
+    <li>
+      <span class="absolute -left-2 top-1 w-4 h-4 rounded-full bg-blue-600"></span>
+      <h3 class="font-bold text-blue-800">2023 — IkanExpress</h3>
+      <p class="text-blue-700">Rebranding dan perluasan katalog: tuna, cakalang, tongkol, udang, cumi.</p>
+    </li>
+    <li>
+      <span class="absolute -left-2 top-1 w-4 h-4 rounded-full bg-blue-600"></span>
+      <h3 class="font-bold text-blue-800">2025 — Lebih Dekat Pelanggan</h3>
+      <p class="text-blue-700">Integrasi pemesanan WA otomatis & rekomendasi katalog di website.</p>
+    </li>
+  </ol>
+</section>
+
+<!-- Misi & Nilai -->
+<section class="max-w-6xl mx-auto px-4 py-12 bg-gradient-to-r from-green-50 via-green-100 to-green-50 rounded-2xl shadow-lg mb-8">
+  <div class="grid md:grid-cols-2 gap-8 items-start">
+    <div>
+      <h2 class="section-title text-green-800">Misi Kami</h2>
+      <p class="section-sub mt-2 text-green-700">
+        Menghubungkan dapur Indonesia dengan hasil laut segar, adil bagi nelayan, aman bagi keluarga.
+      </p>
+      <ul class="mt-6 space-y-3 text-green-700">
+        <li class="flex items-start gap-3"><span class="badge border-green-200 bg-green-50 text-green-700">Segar</span>
+          Panen pagi, kirim hari yang sama.</li>
+        <li class="flex items-start gap-3"><span
+            class="badge border-emerald-200 bg-emerald-50 text-emerald-700">Aman</span> Standar kebersihan & suhu
+          terjaga.</li>
+        <li class="flex items-start gap-3"><span
+            class="badge border-orange-200 bg-orange-50 text-orange-700">Adil</span> Harga wajar yang mendukung
+          nelayan lokal.</li>
+      </ul>
+    </div>
+    <div class="card p-6 bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300">
+      <h3 class="font-bold text-lg text-green-800">Nilai Inti</h3>
+      <div class="mt-4 grid md:grid-cols-2 gap-4">
+        <div class="p-4 rounded-xl bg-green-50 hover:bg-green-100 transition-colors duration-300">
+          <p class="font-semibold text-green-700">Kejujuran</p>
+          <p class="text-sm text-green-600">Transparansi ukuran, berat, dan asal tangkapan.</p>
+        </div>
+        <div class="p-4 rounded-xl bg-green-50 hover:bg-green-100 transition-colors duration-300">
+          <p class="font-semibold text-green-700">Konsistensi</p>
+          <p class="text-sm text-green-600">Kualitas rasa & tekstur yang bisa diandalkan.</p>
+        </div>
+        <div class="p-4 rounded-xl bg-green-50 hover:bg-green-100 transition-colors duration-300">
+          <p class="font-semibold text-green-700">Responsif</p>
+          <p class="text-sm text-green-600">CS cepat tanggap via WhatsApp & DM.</p>
+        </div>
+        <div class="p-4 rounded-xl bg-green-50 hover:bg-green-100 transition-colors duration-300">
+          <p class="font-semibold text-green-700">Keberlanjutan</p>
+          <p class="text-sm text-green-600">Memprioritaskan tangkapan yang ramah lingkungan.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Keunggulan -->
+<section class="max-w-6xl mx-auto px-4 py-12 bg-gradient-to-r from-yellow-50 via-yellow-100 to-yellow-50 rounded-2xl shadow-lg mb-8">
+  <h2 class="section-title text-yellow-800">Kenapa Memilih Kami</h2>
+  <div class="mt-6 grid md:grid-cols-3 gap-6">
+    <div class="card p-6 bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300">
+      <h3 class="font-semibold text-yellow-700">Langsung dari Sumber</h3>
+      <p class="text-yellow-600 mt-2">Kerja sama dengan nelayan Binuangeun & Tempat Pelelangan Ikan.</p>
+    </div>
+    <div class="card p-6 bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300">
+      <h3 class="font-semibold text-yellow-700">Standar Cold-Chain</h3>
+      <p class="text-yellow-600 mt-2">Es gel + insulasi menjaga suhu ideal hingga sampai.</p>
+    </div>
+    <div class="card p-6 bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300">
+      <h3 class="font-semibold text-yellow-700">Potong & Bersih</h3>
+      <p class="text-yellow-600 mt-2">Pilihan fillet/steak/utuh, siap masak tanpa ribet.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Proses Kualitas (steps) -->
+<section class="max-w-6xl mx-auto px-4 py-12 bg-gradient-to-r from-purple-50 via-purple-100 to-purple-50 rounded-2xl shadow-lg mb-8">
+  <h2 class="section-title text-purple-800">Bagaimana Kami Menjaga Kualitas</h2>
+  <div class="mt-6 grid gap-6 md:grid-cols-2">
+    <div class="card p-5 bg-white rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300">
+      <p class="font-semibold text-purple-700">1. Seleksi Pagi</p>
+      <p class="text-purple-600">Memilih ikan segar dari pelelangan.</p>
+    </div>
+    <div class="card p-5 bg-white rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300">
+      <p class="font-semibold text-purple-700">2. Pencucian & Sortir</p>
+      <p class="text-purple-600">Bersih, higienis, bersuhu rendah.</p>
+    </div>
+    <div class="card p-5 bg-white rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300">
+      <p class="font-semibold text-purple-700">3. Pengemasan Dingin</p>
+      <p class="text-purple-600">Vacuum/zip + es gel & insulasi.</p>
+    </div>
+    <div class="card p-5 bg-white rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300">
+      <p class="font-semibold text-purple-700">4. Pengiriman Cepat</p>
+      <p class="text-purple-600">Kurir terlatih rute tercepat.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Tim -->
+<section class="max-w-6xl mx-auto px-4 py-12 bg-gradient-to-r from-pink-50 via-pink-100 to-pink-50 rounded-2xl shadow-lg mb-8">
+  <h2 class="section-title text-pink-800">Tim Kami</h2>
+  <div class="mt-6 grid md:grid-cols-3 gap-6">
+    <div class="card p-6 text-center bg-white rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300">
+      <img class="w-28 h-28 rounded-full mx-auto object-cover" src="../assets/image/ramdhan.png" alt="Founder">
+      <p class="mt-3 font-semibold text-pink-700">Ramdhan Mudzakir</p>
+      <p class="text-sm text-pink-600">Founder & Ops</p>
+    </div>
+    <div class="card p-6 text-center bg-white rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300">
+      <img class="w-28 h-28 rounded-full mx-auto object-cover" src="" alt="QC Lead">
+      <p class="mt-3 font-semibold text-pink-700">Ilham Ramadhan</p>
+      <p class="text-sm text-pink-600">Quality Control</p>
+    </div>
+    <div class="card p-6 text-center bg-white rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300">
+      <img class="w-28 h-28 rounded-full mx-auto object-cover" src="" alt="Customer Care">
+      <p class="mt-3 font-semibold text-pink-700">Khaerul Anwar</p>
+      <p class="text-sm text-pink-600">Customer Care</p>
+    </div>
+  </div>
+</section>
+
+<!-- Testimoni -->
+<section class="max-w-6xl mx-auto px-4 py-12 bg-gradient-to-r from-yellow-50 via-yellow-100 to-yellow-50 rounded-2xl shadow-lg mb-8">
+  <h2 class="section-title text-yellow-800">Apa Kata Pelanggan</h2>
+  <div class="mt-6 grid md:grid-cols-3 gap-6">
+    <figure class="card p-6 bg-white rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300">
+      <blockquote class="text-yellow-700">“Tiba masih dingin, ikannya segar banget. Anak-anak lahap!”</blockquote>
+      <figcaption class="mt-3 text-sm text-yellow-600">— Nisa, Rangkasbitung</figcaption>
+    </figure>
+    <figure class="card p-6 bg-white rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300">
+      <blockquote class="text-yellow-700">“Fillet rapi, bumbu nyerap. Recommended untuk meal prep.”</blockquote>
+      <figcaption class="mt-3 text-sm text-yellow-600">— Bima, Serang</figcaption>
+    </figure>
+    <figure class="card p-6 bg-white rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300">
+      <blockquote class="text-yellow-700">“CS ramah, bisa nego wajar. Repeat order pasti.”</blockquote>
+      <figcaption class="mt-3 text-sm text-yellow-600">— Rara, Pandeglang</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- Pengakuan & Sertifikasi -->
+<section class="max-w-6xl mx-auto px-4 py-12 bg-gradient-to-r from-teal-50 via-teal-100 to-teal-50 rounded-2xl shadow-lg mb-8">
+  <h2 class="section-title text-teal-800">Pengakuan & Sertifikasi</h2>
+  <div class="mt-6 grid gap-6 md:grid-cols-3">
+    <div class="card p-5 bg-white rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300">
+      <p class="font-semibold text-teal-700">Kemitraan TPI Binuangeun</p>
+      <p class="text-teal-600 text-sm">Komitmen transparansi asal tangkapan.</p>
+    </div>
+    <div class="card p-5 bg-white rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300">
+      <p class="font-semibold text-teal-700">Standar Kebersihan Internal</p>
+      <p class="text-teal-600 text-sm">SOP cuci & packing setara restoran.</p>
+    </div>
+    <div class="card p-5 bg-white rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300">
+      <p class="font-semibold text-teal-700">Uji Sampling Berkala</p>
+      <p class="text-teal-600 text-sm">Cek organoleptik & suhu inti produk.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Keberlanjutan & Dampak -->
+<section class="max-w-6xl mx-auto px-4 py-12 bg-gradient-to-r from-green-50 via-green-100 to-green-50 rounded-2xl shadow-lg mb-8">
+  <h2 class="section-title text-green-800">Keberlanjutan & Dampak</h2>
+  <div class="mt-6 card p-6 bg-white rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300">
+    <ul class="grid md:grid-cols-2 gap-4 text-green-700">
+      <li>Prioritas ukuran legal & musim tangkap.</li>
+      <li>Minim limbah plastik dengan kemasan dapat didaur ulang.</li>
+      <li>Memberdayakan UMKM lokal di rantai pasok.</li>
+      <li>Program donasi protein untuk panti & dapur umum.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- FAQ (Accordion) -->
+<section class="max-w-6xl mx-auto px-4 py-12 bg-gradient-to-r from-indigo-50 via-indigo-100 to-indigo-50 rounded-2xl shadow-lg mb-8">
+  <h2 class="section-title text-indigo-800">Pertanyaan Umum</h2>
+  <div class="mt-6 space-y-3">
+    <div class="card bg-white rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300">
+      <button class="accordion-btn w-full flex items-center justify-between px-5 py-4 text-indigo-700" aria-expanded="false">
+        <span class="font-semibold text-left">Seberapa cepat pesanan diproses?</span>
+        <svg class="chev w-5 h-5 transition-transform" viewBox="0 0 20 20" fill="currentColor">
+          <path d="M5.3 7.3a1 1 0 0 1 1.4 0L10 10.6l3.3-3.3a1 1 0 0 1 1.4 1.4l-4 4a1 1 0 0 1-1.4 0l-4-4a1 1 0 0 1 0-1.4z" />
+        </svg>
+      </button>
+      <div class="px-5 pb-5 hidden text-indigo-600">Order sebelum jam 12:00 biasanya dikirim di hari yang sama (area tertentu).</div>
+    </div>
+    <div class="card bg-white rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300">
+      <button class="accordion-btn w-full flex items-center justify-between px-5 py-4 text-indigo-700" aria-expanded="false">
+        <span class="font-semibold text-left">Bagaimana memastikan ikan tetap segar?</span>
+        <svg class="chev w-5 h-5 transition-transform" viewBox="0 0 20 20" fill="currentColor">
+          <path d="M5.3 7.3a1 1 0 0 1 1.4 0L10 10.6l3.3-3.3a1 1 0 0 1 1.4 1.4l-4 4a1 1 0 0 1-1.4 0l-4-4a1 1 0 0 1 0-1.4z" />
+        </svg>
+      </button>
+      <div class="px-5 pb-5 hidden text-indigo-600">Kami gunakan es gel, insulasi, dan rute tercepat. Anda juga bisa pilih opsi vacuum.</div>
+    </div>
+    <div class="card bg-white rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300">
+      <button class="accordion-btn w-full flex items-center justify-between px-5 py-4 text-indigo-700" aria-expanded="false">
+        <span class="font-semibold text-left">Apakah bisa nego harga?</span>
+        <svg class="chev w-5 h-5 transition-transform" viewBox="0 0 20 20" fill="currentColor">
+          <path d="M5.3 7.3a1 1 0 0 1 1.4 0L10 10.6l3.3-3.3a1 1 0 0 1 1.4 1.4l-4 4a1 1 0 0 1-1.4 0l-4-4a1 1 0 0 1 0-1.4z" />
+        </svg>
+      </button>
+      <div class="px-5 pb-5 hidden text-indigo-600">Bisa! Chat kami via WhatsApp, jelaskan kebutuhan & jumlahnya, kami sesuaikan terbaik.</div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="max-w-6xl mx-auto px-4 py-12 bg-gradient-to-r from-green-50 via-green-100 to-green-50 rounded-2xl shadow-lg mb-8">
+  <div class="card p-6 md:p-10 flex flex-col md:flex-row items-center justify-between gap-6 bg-white rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300">
+    <div>
+      <h3 class="text-2xl font-extrabold text-green-800">Siap coba kesegaran IkanExpress?</h3>
+      <p class="text-green-700 mt-1">Klik tombol di kanan untuk pesan cepat lewat WhatsApp.</p>
+    </div>
+    <a id="wa-btn" href="https://wa.me/6281234567890?text=Halo%20IkanExpress%2C%20saya%20ingin%20pesan"
+      class="px-6 py-3 rounded-2xl bg-green-600 text-white font-semibold hover:opacity-90 focus:outline-none focus:[box-shadow:var(--ring)]">
+      Order via WhatsApp (Bisa Nego)
+    </a>
+  </div>
+</section>
+
+
+  <!-- Footer ringkas -->
+  <footer id="kontak" class="border-t border-slate-200">
+    <div class="max-w-6xl mx-auto px-4 py-10 text-sm text-slate-600">
+      <div class="grid md:grid-cols-3 gap-6">
+        <div>
+          <p class="font-semibold text-slate-800">IkanExpress Pasar Binuangeun</p>
+          <p>Tagline: Ikan Segar langsung dari pasar!</p>
+          <p class="mt-2">Email: hello@ikanexpress.id • WA: +62 812-3456-7890</p>
+        </div>
+        <div>
+          <p class="font-semibold text-slate-800">Alamat</p>
+          <p>Pasar Ikan Binuangeun, Lebak, Banten</p>
+          <!-- Opsional: sematkan map -->
+        </div>
+        <div>
+          <p class="font-semibold text-slate-800">Jam Operasional</p>
+          <p>Senin–Sabtu 06:00–18:00 • Minggu 06:00–12:00</p>
+        </div>
+      </div>
+      <p class="mt-6">© <span id="year"></span> IkanExpress. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Organization",
+    "name":"IkanExpress Pasar Binuangeun",
+    "url":"https://ikanexpress.id",
+    "logo":"https://ikanexpress.id/logo.png",
+    "sameAs":["https://instagram.com/ikanexpress"],
+    "description":"Ikan segar langsung dari Pasar Binuangeun, pengemasan cold chain, pengiriman cepat.",
+    "address":{
+      "@type":"PostalAddress",
+      "addressLocality":"Lebak",
+      "addressRegion":"Banten",
+      "addressCountry":"ID"
+    },
+    "contactPoint":{
+      "@type":"ContactPoint",
+      "contactType":"customer service",
+      "telephone":"+6281234567890",
+      "areaServed":"ID"
+    }
+  }
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="../script.js"></script>
+</body>
+
+</html>

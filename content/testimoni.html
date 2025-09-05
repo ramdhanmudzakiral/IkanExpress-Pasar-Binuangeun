@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Testimoni</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+</head>
+
+<body>
+  <nav class="bg-white shadow-md sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+      <!-- Logo -->
+      <h1 class="text-2xl font-bold text-blue-600">
+        <a href="../index.html" class="flex items-center">
+          <img src="../assets/image/IkanExpress.png" alt="IkanExpress" class="h-14 w-auto">
+        </a>
+      </h1>
+
+
+      <!-- Tombol Hamburger (hanya muncul di HP) -->
+      <button id="menu-btn" class="md:hidden text-2xl focus:outline-none">
+        ☰
+      </button>
+
+      <!-- Menu utama (desktop) -->
+      <ul class="hidden md:flex space-x-6 font-medium">
+        <li><a href="../index.html" class="hover:text-blue-500">Home</a></li>
+        <li><a href="../index.html#produk" class="hover:text-blue-500">Produk</a></li>
+        <li><a href="./tentangkami.html" class="hover:text-blue-500">Tentang Kami</a></li>
+        <li><a href="#" class="hover:text-blue-500">Testimoni</a></li>
+        <li><a href="#kontak" class="hover:text-blue-500">Kontak</a></li>
+      </ul>
+
+      <!-- Search Box (desktop) -->
+      <div class="hidden md:flex items-center space-x-2">
+        <input type="text" id="search" placeholder="Cari Ikan" class="border rounded-lg px-3 py-1 focus:outline-none">
+        <button class="bg-blue-500 text-white px-3 py-1 rounded-lg hover:bg-blue-600">
+          Cari
+        </button>
+      </div>
+    </div>
+
+
+    <!-- Search khusus HP -->
+    <div class="md:hidden px-4 mb-4 py-5">
+      <input type="text" id="search-mobile" placeholder="Cari produk..."
+        class="w-full border rounded-lg px-3 py-2 focus:outline-none">
+    </div>
+
+    <!-- Sidebar untuk HP -->
+    <div id="sidebar"
+      class="fixed top-0 left-0 h-full w-64 bg-white shadow-lg transform -translate-x-full transition-transform duration-300 z-50">
+      <div class="p-4 flex justify-between items-center border-b">
+        <h2 class="text-xl font-bold text-blue-600">Menu</h2>
+        <button id="close-btn" class="text-2xl">&times;</button>
+      </div>
+      <ul class="flex flex-col p-4 space-y-4 font-medium">
+        <li><a href="index.html" class="hover:text-blue-500">Home</a></li>
+        <li><a href="../index.html#produk" class="hover:text-blue-500">Produk</a></li>
+        <li><a href="../content/tentangkami.html" class="hover:text-blue-500">Tentang Kami</a></li>
+        <li><a href="#" class="hover:text-blue-500">Testimoni</a></li>
+        <li><a href="#kontak" class="hover:text-blue-500">Kontak</a></li>
+      </ul>
+    </div>
+
+  </nav>
+  <!-- Hero -->
+  <section class="bg-gradient-to-r from-blue-100 to-blue-50 py-16 text-center">
+    <h2 class="text-4xl font-extrabold text-blue-700">Apa Kata Pelanggan Kami?</h2>
+    <p class="mt-3 text-gray-600 text-lg">Bukti nyata kepuasan pelanggan melalui WhatsApp & pengalaman langsung.</p>
+  </section>
+
+  <!-- Section: Screenshot WhatsApp -->
+  <!-- <section class="max-w-7xl mx-auto px-4 py-12">
+    <h3 class="text-2xl font-bold mb-6">Screenshoot Orderan via WhatsApp</h3>
+    <div class="grid md:grid-cols-3 gap-6"> -->
+  <!-- Ganti src dengan screenshot asli -->
+  <!-- <img src="https://dummyimage.com/400x700/ddd/000&text=WA+Order+1" class="rounded-xl shadow-lg"/>
+      <img src="https://dummyimage.com/400x700/ccc/000&text=WA+Order+2" class="rounded-xl shadow-lg"/>
+      <img src="https://dummyimage.com/400x700/bbb/000&text=WA+Order+3" class="rounded-xl shadow-lg"/>
+      <img src="https://dummyimage.com/400x700/aaa/000&text=WA+Order+4" class="rounded-xl shadow-lg"/>
+      <img src="https://dummyimage.com/400x700/999/fff&text=WA+Order+5" class="rounded-xl shadow-lg"/>
+      <img src="https://dummyimage.com/400x700/777/fff&text=WA+Order+6" class="rounded-xl shadow-lg"/>
+    </div>
+  </section> -->
+
+  <!-- Section: Testimoni Teks -->
+  <section class="bg-white py-12">
+    <div class="max-w-5xl mx-auto text-center">
+      <h3 class="text-2xl font-bold">Cerita Pelanggan</h3>
+      <div class="mt-8 grid md:grid-cols-3 gap-6">
+        <blockquote class="p-6 bg-gray-50 rounded-xl shadow">
+          “Ikan datang masih segar, anak-anak lahap banget. Mantap!”
+          <footer class="mt-3 text-sm text-gray-500">— Nisa, Rangkasbitung</footer>
+        </blockquote>
+        <blockquote class="p-6 bg-gray-50 rounded-xl shadow">
+          “Fillet bersih dan rapi, enak buat meal prep mingguan. Recommended!”
+          <footer class="mt-3 text-sm text-gray-500">— Bima, Serang</footer>
+        </blockquote>
+        <blockquote class="p-6 bg-gray-50 rounded-xl shadow">
+          “Admin ramah, bisa nego harga. Repeat order pasti.”
+          <footer class="mt-3 text-sm text-gray-500">— Rara, Pandeglang</footer>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section: Rating -->
+  <section class="py-12 max-w-6xl mx-auto px-4">
+    <h3 class="text-2xl font-bold text-center">Rating Kepuasan</h3>
+    <div class="mt-8 grid md:grid-cols-3 gap-6 text-center">
+      <div class="bg-white p-6 rounded-xl shadow">
+        <p class="text-4xl font-extrabold text-blue-600">4.9/5</p>
+        <p class="text-gray-500">Rata-rata rating</p>
+      </div>
+      <div class="bg-white p-6 rounded-xl shadow">
+        <p class="text-4xl font-extrabold text-blue-600">98%</p>
+        <p class="text-gray-500">Repeat Order</p>
+      </div>
+      <div class="bg-white p-6 rounded-xl shadow">
+        <p class="text-4xl font-extrabold text-blue-600">7500+</p>
+        <p class="text-gray-500">Pesanan Terselesaikan</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section: Video Testimoni -->
+  <section class="bg-gray-50 py-12">
+    <div class="max-w-5xl mx-auto text-center">
+      <h3 class="text-2xl font-bold">Video Testimoni</h3>
+      <p class="text-gray-600 mt-2">Simak pengalaman langsung pelanggan setia kami.</p>
+      <div class="mt-6 grid md:grid-cols-2 gap-6">
+        <iframe class="w-full h-64 rounded-xl shadow" src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+          allowfullscreen></iframe>
+        <iframe class="w-full h-64 rounded-xl shadow" src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+          allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- Form Kirim Testimoni -->
+  <section class="max-w-4xl mx-auto px-4 py-12">
+    <h3 class="text-2xl font-bold text-center">Kirim Testimoni Anda</h3>
+
+    <form action="../backend/simpan_testimoni.php" method="POST" class="mt-6 space-y-4 bg-white p-6 rounded-xl shadow">
+
+      <input type="text" name="nama" placeholder="Nama Anda" required class="w-full border rounded-lg px-4 py-2" />
+
+      <textarea name="pesan" placeholder="Ceritakan pengalaman Anda" required
+        class="w-full border rounded-lg px-4 py-2"></textarea>
+
+      <button type="submit" class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700">
+        Kirim
+      </button>
+    </form>
+  </section>
+
+
+  <!-- Section: CTA -->
+  <section class="bg-blue-600 text-white py-12 text-center">
+    <h3 class="text-2xl font-extrabold">Siap Coba IkanExpress?</h3>
+    <p class="mt-2">Klik tombol di bawah untuk pesan via WhatsApp (Bisa Nego).</p>
+    <a href="https://wa.me/6281234567890?text=Halo%20IkanExpress"
+      class="mt-4 inline-block bg-green-500 px-6 py-3 rounded-xl font-semibold hover:bg-green-600">
+      Order Sekarang
+    </a>
+  </section>
+
+  <!-- Footer -->
+  <footer id="kontak" class="border-t border-slate-200">
+    <div class="max-w-6xl mx-auto px-4 py-10 text-sm text-slate-600">
+      <div class="grid md:grid-cols-3 gap-6">
+        <div>
+          <p class="font-semibold text-slate-800">IkanExpress Pasar Binuangeun</p>
+          <p>Tagline: Ikan Segar langsung dari pasar!</p>
+          <p class="mt-2">Email: hello@ikanexpress.id • WA: +62 812-3456-7890</p>
+        </div>
+        <div>
+          <p class="font-semibold text-slate-800">Alamat</p>
+          <p>Pasar Ikan Binuangeun, Lebak, Banten</p>
+          <!-- Opsional: sematkan map -->
+        </div>
+        <div>
+          <p class="font-semibold text-slate-800">Jam Operasional</p>
+          <p>Senin–Sabtu 06:00–18:00 • Minggu 06:00–12:00</p>
+        </div>
+      </div>
+      <p class="mt-6">© <span id="year"></span> IkanExpress. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="../script.js"></script>
+</body>
+
+</html>

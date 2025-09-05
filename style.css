@@ -1,0 +1,30 @@
+/* Custom styling tambahan di luar Tailwind */
+body {
+  scroll-behavior: smooth;
+}
+
+nav input {
+  width: 160px;
+}
+
+nav input:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 5px rgba(59, 130, 246, 0.5);
+}
+
+#video h2, 
+#video p {
+  animation: fadeInUp 1s ease forwards;
+  opacity: 0;
+}
+
+@keyframes fadeInUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

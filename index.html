@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IkanExpress Pasar Binuangeun</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+</head>
+
+<body class="bg-gray-50 text-gray-800">
+
+  <!-- Navbar -->
+  <nav class="bg-white shadow-md sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+      <!-- Logo -->
+      <a href="index.html" class="flex items-center">
+        <img src="../assets/image/IkanExpress.png" alt="IkanExpress" class="h-14 w-auto">
+      </a>
+      </h1>
+
+      <!-- Tombol Hamburger (hanya muncul di HP) -->
+      <button id="menu-btn" class="md:hidden text-2xl focus:outline-none">
+        ☰
+      </button>
+
+      <!-- Menu utama (desktop) -->
+      <ul class="hidden md:flex space-x-6 font-medium">
+        <li><a href="index.html" class="hover:text-blue-500">Home</a></li>
+        <li><a href="#produk" class="hover:text-blue-500">Produk</a></li>
+        <li><a href="content/tentangkami.html" class="hover:text-blue-500">Tentang Kami</a></li>
+        <li><a href="content/testimoni.html" class="hover:text-blue-500">Testimoni</a></li>
+        <li><a href="#kontak" class="hover:text-blue-500">Kontak</a></li>
+      </ul>
+
+      <!-- Search Box (desktop) -->
+      <div class="hidden md:flex items-center space-x-2">
+        <input type="text" id="search" placeholder="Cari Ikan" class="border rounded-lg px-3 py-1 focus:outline-none">
+        <button class="bg-blue-500 text-white px-3 py-1 rounded-lg hover:bg-blue-600">
+          Cari
+        </button>
+      </div>
+    </div>
+
+
+    <!-- Search khusus HP -->
+    <div class="md:hidden px-4 mb-4 py-5">
+      <input type="text" id="search-mobile" placeholder="Cari produk..."
+        class="w-full border rounded-lg px-3 py-2 focus:outline-none">
+    </div>
+
+    <!-- Sidebar untuk HP -->
+    <div id="sidebar"
+      class="fixed top-0 left-0 h-full w-64 bg-white shadow-lg transform -translate-x-full transition-transform duration-300 z-50">
+      <div class="p-4 flex justify-between items-center border-b">
+        <h2 class="text-xl font-bold text-blue-600">Menu</h2>
+        <button id="close-btn" class="text-2xl">&times;</button>
+      </div>
+      <ul class="flex flex-col p-4 space-y-4 font-medium">
+        <li><a href="index.html" class="hover:text-blue-500">Home</a></li>
+        <li><a href="#produk" class="hover:text-blue-500">Produk</a></li>
+        <li><a href="content/tentangkami.html" class="hover:text-blue-500">Tentang Kami</a></li>
+        <li><a href="content/testimoni.html" class="hover:text-blue-500">Testimoni</a></li>
+        <li><a href="#kontak" class="hover:text-blue-500">Kontak</a></li>
+      </ul>
+    </div>
+
+  </nav>
+
+  <!-- Section Video -->
+  <!-- Section Video Background -->
+  <section id="video" class="relative h-[80vh] w-full flex items-center justify-center text-center text-white">
+    <!-- Video Background -->
+    <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover">
+      <source src="/assets/video/animasiLogo.mp4" type="video/mp4">
+      Browser kamu tidak mendukung video.
+    </video>
+
+    <!-- Overlay hitam transparan biar teks lebih jelas -->
+    <div class="absolute inset-0 bg-black/40"></div>
+
+    <!-- Konten di atas video -->
+    <div class="relative z-10 max-w-2xl px-4">
+      <h2 class="text-4xl md:text-5xl font-bold mb-4">IkanExpress Pasar Binuangeun</h2>
+
+      <!-- <p class="text-lg md:text-xl">
+      Pasar Binuangeun di Lebak, Banten adalah pusat ikan segar yang menjadi kebanggaan masyarakat pesisir. Setiap hari, nelayan membawa hasil tangkapan laut terbaik langsung ke pasar, sehingga pembeli bisa mendapatkan ikan berkualitas dengan harga yang terjangkau. Selain menjadi tempat jual beli, pasar ini juga mencerminkan tradisi dan kehidupan nelayan yang terus hidup hingga kini.
+    </p> -->
+    </div>
+  </section>
+
+
+
+  <!-- Section Produk -->
+  <section id="produk" class="py-10 max-w-7xl mx-auto px-4">
+    <h2 class="text-3xl font-bold text-center mb-6">Produk Unggulan</h2>
+    <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-2 ">
+      <!-- Card Produk -->
+      <div class="bg-white rounded-xl shadow hover:shadow-lg transition p-4 text-center">
+        <img src="assets/image/kakapmerah.jpg" alt="Ikan Segar" class="w-full h-40 object-cover rounded-lg mb-3">
+        <h3 class="font-semibold">Kakap Merah</h3>
+        <p class="text-sm text-gray-600">Langsung dari nelayan Binuangeun</p>
+        <button class="wa-btn mt-3 bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600">Beli</button>
+      </div>
+      <div class="bg-white rounded-xl shadow hover:shadow-lg transition p-4 text-center">
+        <img src="assets/image/layur.jpg" alt="Ikan Segar" class="w-full h-40 object-cover rounded-lg mb-3">
+        <h3 class="font-semibold">Ikan Layur</h3>
+        <p class="text-sm text-gray-600">Langsung dari nelayan Binuangeun</p>
+        <button class="wa-btn mt-3 bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600">Beli</button>
+      </div>
+      <div class="bg-white rounded-xl shadow hover:shadow-lg transition p-4 text-center">
+        <img src="assets/image/kuwe.jpg" alt="Ikan Segar" class="w-full h-40 object-cover rounded-lg mb-3">
+        <h3 class="font-semibold">Ikan Kuwe</h3>
+        <p class="text-sm text-gray-600">Langsung dari nelayan Binuangeun</p>
+        <button class="wa-btn mt-3 bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600">Beli</button>
+      </div>
+      <div class="bg-white rounded-xl shadow hover:shadow-lg transition p-4 text-center">
+        <img src="assets/image/kerapu.jpg" alt="Ikan Segar" class="w-full h-40 object-cover rounded-lg mb-3">
+        <h3 class="font-semibold">Ikan Kerapu</h3>
+        <p class="text-sm text-gray-600">Langsung dari nelayan Binuangeun</p>
+        <button class="wa-btn mt-3 bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600">Beli</button>
+      </div>
+      <div class="bg-white rounded-xl shadow hover:shadow-lg transition p-4 text-center">
+        <img src="assets/image/layang.jpg" alt="Ikan Segar" class="w-full h-40 object-cover rounded-lg mb-3">
+        <h3 class="font-semibold">Ikan Layang</h3>
+        <p class="text-sm text-gray-600">Langsung dari nelayan Binuangeun</p>
+        <button class="wa-btn mt-3 bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600">Beli</button>
+      </div>
+      <div class="bg-white rounded-xl shadow hover:shadow-lg transition p-4 text-center">
+        <img src="assets/image/tongkol.webp" alt="Ikan Segar" class="w-full h-40 object-cover rounded-lg mb-3">
+        <h3 class="font-semibold">Ikan Tongkol</h3>
+        <p class="text-sm text-gray-600">Langsung dari nelayan Binuangeun</p>
+        <button class="wa-btn mt-3 bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600">Beli</button>
+      </div>
+      <div class="bg-white rounded-xl shadow hover:shadow-lg transition p-4 text-center">
+        <img src="assets/image/cumi.webp" alt="Ikan Segar" class="w-full h-40 object-cover rounded-lg mb-3">
+        <h3 class="font-semibold">Cumi-Cumi</h3>
+        <p class="text-sm text-gray-600">Langsung dari nelayan Binuangeun</p>
+        <button class="wa-btn mt-3 bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600">Beli</button>
+      </div>
+      <div class="bg-white rounded-xl shadow hover:shadow-lg transition p-4 text-center">
+        <img src="assets/image/tenggiri.jpg" alt="Ikan Segar" class="w-full h-40 object-cover rounded-lg mb-3">
+        <h3 class="font-semibold">Ikan Tenggiri</h3>
+        <p class="text-sm text-gray-600">Langsung dari nelayan Binuangeun</p>
+        <button class="wa-btn mt-3 bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600">Beli</button>
+      </div>
+      <div class="bg-white rounded-xl shadow hover:shadow-lg transition p-4 text-center">
+        <img src="assets/image/tuna.jpg" alt="Ikan Segar" class="w-full h-40 object-cover rounded-lg mb-3">
+        <h3 class="font-semibold">Ikan Tuna</h3>
+        <p class="text-sm text-gray-600">Langsung dari nelayan Binuangeun</p>
+        <button class="wa-btn mt-3 bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600">Beli</button>
+      </div>
+      <div class="bg-white rounded-xl shadow hover:shadow-lg transition p-4 text-center">
+        <img src="assets/image/teri.jpg" alt="Ikan Segar" class="w-full h-40 object-cover rounded-lg mb-3">
+        <h3 class="font-semibold">Ikan Teri</h3>
+        <p class="text-sm text-gray-600">Langsung dari nelayan Binuangeun</p>
+        <button class="wa-btn mt-3 bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600">Beli</button>
+      </div>
+      <div class="bg-white rounded-xl shadow hover:shadow-lg transition p-4 text-center">
+        <img src="assets/image/ekorkuning.jpg" alt="Ikan Segar" class="w-full h-40 object-cover rounded-lg mb-3">
+        <h3 class="font-semibold">Ikan Ekor Kuning</h3>
+        <p class="text-sm text-gray-600">Langsung dari nelayan Binuangeun</p>
+        <button class="wa-btn mt-3 bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600">Beli</button>
+      </div>
+      <div class="bg-white rounded-xl shadow hover:shadow-lg transition p-4 text-center">
+        <img src="assets/image/barakuda.jpg" alt="Ikan Segar" class="w-full h-40 object-cover rounded-lg mb-3">
+        <h3 class="font-semibold">Ikan Barakuda</h3>
+        <p class="text-sm text-gray-600">Langsung dari nelayan Binuangeun</p>
+        <button class="wa-btn mt-3 bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600">Beli</button>
+      </div>
+      <div class="bg-white rounded-xl shadow hover:shadow-lg transition p-4 text-center">
+        <img src="assets/image/tembang.jpg" alt="Ikan Segar" class="w-full h-40 object-cover rounded-lg mb-3">
+        <h3 class="font-semibold">Ikan Tembang</h3>
+        <p class="text-sm text-gray-600">Langsung dari nelayan Binuangeun</p>
+        <button class="wa-btn mt-3 bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600">Beli</button>
+      </div>
+      <div class="bg-white rounded-xl shadow hover:shadow-lg transition p-4 text-center">
+        <img src="assets/image/bandeng.jpg" alt="Ikan Segar" class="w-full h-40 object-cover rounded-lg mb-3">
+        <h3 class="font-semibold">Ikan Bandeng</h3>
+        <p class="text-sm text-gray-600">Langsung dari nelayan Binuangeun</p>
+        <button class="wa-btn mt-3 bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600">Beli</button>
+      </div>
+      <div class="bg-white rounded-xl shadow hover:shadow-lg transition p-4 text-center">
+        <img src="assets/image/pari.jpg" alt="Ikan Segar" class="w-full h-40 object-cover rounded-lg mb-3">
+        <h3 class="font-semibold">Ikan Pari</h3>
+        <p class="text-sm text-gray-600">Langsung dari nelayan Binuangeun</p>
+        <button class="wa-btn mt-3 bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600">Beli</button>
+      </div>
+      <div class="bg-white rounded-xl shadow hover:shadow-lg transition p-4 text-center">
+        <img src="assets/image/bawallaut.jpg" alt="Ikan Segar" class="w-full h-40 object-cover rounded-lg mb-3">
+        <h3 class="font-semibold">Ikan Bawal Laut</h3>
+        <p class="text-sm text-gray-600">Langsung dari nelayan Binuangeun</p>
+        <button class="wa-btn mt-3 bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600">Beli</button>
+      </div>
+      <div class="bg-white rounded-xl shadow hover:shadow-lg transition p-4 text-center">
+        <img src="assets/image/banyar.jpg" alt="Ikan Segar" class="w-full h-40 object-cover rounded-lg mb-3">
+        <h3 class="font-semibold">Ikan Banyar</h3>
+        <p class="text-sm text-gray-600">Langsung dari nelayan Binuangeun</p>
+        <button class="wa-btn mt-3 bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600">Beli</button>
+      </div>
+
+      <!-- Tambahkan produk lainnya sesuai kebutuhan -->
+    </div>
+  </section>
+
+  <!-- Carousel -->
+<section class="max-w-6xl mx-auto px-4 py-12">
+  <h2 class="text-2xl font-bold text-center mb-6">Lokasi & Galeri</h2>
+  
+  <div class="relative overflow-hidden rounded-2xl shadow-lg">
+    <!-- Slides -->
+    <div id="carousel-slides" class="flex transition-transform duration-700 ease-in-out">
+      
+      <!-- Slide 1 - Google Maps -->
+      <div class="min-w-full h-96 bg-gray-100 flex items-center justify-center">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.417884163139!2d106.211!3d-6.913!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e423fb24f8b58ab%3A0x123456789abcdef!2sPasar%20Binuangeun!5e0!3m2!1sid!2sid!4v1690123456789!5m2!1sid!2sid"
+          class="w-full h-full border-0"
+          allowfullscreen=""
+          loading="lazy">
+        </iframe>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="min-w-full h-96">
+        <img src="assets/image/pasar.jpg" alt="Pasar Ikan" class="w-full h-full object-cover">
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="min-w-full h-96">
+        <img src="assets/image/nelayan.jpg" alt="nelayan" class="w-full h-full object-cover">
+      </div>
+
+      <!-- Slide 4 -->
+      <div class="min-w-full h-96">
+        <img src="assets/image/pelabuhan.jpeg" alt="Nelayan" class="w-full h-full object-cover">
+      </div>
+    </div>
+
+    <!-- Prev Button -->
+    <button id="prev-btn"
+      class="absolute top-1/2 left-3 -translate-y-1/2 bg-black bg-opacity-50 text-white p-3 rounded-full hover:bg-opacity-80 transition">
+      ‹
+    </button>
+
+    <!-- Next Button -->
+    <button id="next-btn"
+      class="absolute top-1/2 right-3 -translate-y-1/2 bg-black bg-opacity-50 text-white p-3 rounded-full hover:bg-opacity-80 transition">
+      ›
+    </button>
+
+    <!-- Indicators -->
+    <div class="absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-2">
+      <button class="w-3 h-3 rounded-full bg-white opacity-50" data-slide="0"></button>
+      <button class="w-3 h-3 rounded-full bg-white opacity-50" data-slide="1"></button>
+      <button class="w-3 h-3 rounded-full bg-white opacity-50" data-slide="2"></button>
+      <button class="w-3 h-3 rounded-full bg-white opacity-50" data-slide="3"></button>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+  <!-- Section Tentang / Tagline -->
+  <section id="tentang" class="py-12 max-w-5xl mx-auto px-4 text-center">
+    <h2 class="text-4xl font-bold text-blue-600 mb-4">"Dari Laut ke Meja Anda"</h2>
+    <p class="text-gray-700 text-lg leading-relaxed">
+      IkanExpress hadir membawa kesegaran laut Binuangeun langsung ke rumah Anda.
+      Dengan tagline ini, kami memastikan setiap produk dipilih dengan teliti, berkualitas tinggi, dan tetap segar.
+    </p>
+    <p class="text-lg md:text-xl text-green-700">
+      Pasar Binuangeun di Lebak, Banten adalah pusat ikan segar yang menjadi kebanggaan masyarakat pesisir. Setiap hari,
+      nelayan membawa hasil tangkapan laut terbaik langsung ke pasar, sehingga pembeli bisa mendapatkan ikan berkualitas
+      dengan harga yang terjangkau. Selain menjadi tempat jual beli, pasar ini juga mencerminkan tradisi dan kehidupan
+      nelayan yang terus hidup hingga kini.
+    </p>
+  </section>
+
+  <!-- Footer -->
+  <footer id="kontak" class="border-t border-slate-200">
+    <div class="max-w-6xl mx-auto px-4 py-10 text-sm text-slate-600">
+      <div class="grid md:grid-cols-3 gap-6">
+        <div>
+          <p class="font-semibold text-slate-800">IkanExpress Pasar Binuangeun</p>
+          <p>Tagline: Ikan Segar langsung dari pasar!</p>
+          <p class="mt-2">Email: hello@ikanexpress.id • WA: +62 812-3456-7890</p>
+        </div>
+        <div>
+          <p class="font-semibold text-slate-800">Alamat</p>
+          <p>Pasar Ikan Binuangeun, Lebak, Banten</p>
+          <!-- Opsional: sematkan map -->
+        </div>
+        <div>
+          <p class="font-semibold text-slate-800">Jam Operasional</p>
+          <p>Senin–Sabtu 06:00–18:00 • Minggu 06:00–12:00</p>
+        </div>
+      </div>
+      <p class="mt-6">© <span id="year"></span> IkanExpress. All rights reserved.</p>
+    </div>
+  </footer>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>

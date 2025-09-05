@@ -1,0 +1,11 @@
+
+    :root { --ring: 0 0 0 4px rgb(59 130 246 / .2) }
+    body { font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif }
+    .glass { backdrop-filter: saturate(160%) blur(10px); background: rgba(255,255,255,.7) }
+    .section-title { @apply text-2xl md:text-3xl font-extrabold tracking-tight; }
+    .section-sub { @apply text-slate-600 max-w-2xl; }
+    .card { @apply rounded-2xl shadow-sm border border-slate-200 bg-white; }
+    .badge { @apply inline-flex items-center rounded-full px-3 py-1 text-xs font-semibold border; }
+    .grid-auto { display:grid; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); gap:1rem }
+    .accordion-btn[aria-expanded="true"] .chev { transform: rotate(180deg); }
+  
